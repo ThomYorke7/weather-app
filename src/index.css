@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 22px;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  padding: 1rem;
+}
+
+.searchbar h1 {
+  margin: 0;
+}
+
+.searchbar input {
+  margin-right: 0.3rem;
+  font-size: 1rem;
+}
+
+.searchbar button {
+  font-size: 1rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.main {
+  display: grid;
+  width: 50%;
+  margin: auto;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr;
+  grid-template-areas:
+    'icon temp tempMax'
+    'icon temp tempMin'
+    'description description description'
+    'feelsLike feelsLike feelsLike'
+    'humidity wind sunset';
+}
+
+#icon {
+  grid-area: icon;
+  justify-self: right;
+  align-self: center;
+}
+
+#temp {
+  grid-area: temp;
+  justify-self: center;
+  align-self: center;
+  font-size: 3rem;
+}
+
+#tempMax {
+  grid-area: tempMax;
+  align-self: end;
+}
+
+#tempMin {
+  grid-area: tempMin;
+  align-self: start;
+}
+
+#description {
+  grid-area: description;
+  justify-self: center;
+  align-self: start;
+}
+
+#feelsLike {
+  grid-area: feelsLike;
+  justify-self: center;
+  align-self: start;
+}
+
+.footer {
+  display: flex;
+  width: auto;
+  margin: 2rem auto;
+  justify-content: center;
+  height: 2rem;
+}
+
+.footerIcon {
+  object-fit: contain;
+  height: 100%;
+}
+
+.footerSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sunsetSpans {
+  display: flex;
+  flex-direction: column;
+}
