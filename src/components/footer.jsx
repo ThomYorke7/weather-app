@@ -4,7 +4,7 @@ import windIcon from '../icons/wind.png';
 import sunsetIcon from '../icons/sunset.png';
 
 const Footer = (props) => {
-  const { sunrise, sunset, humidity, wind } = props;
+  const { sunrise, sunset, humidity, wind, unit } = props;
   return (
     <div className='footer'>
       <div className='footerSection'>
@@ -13,7 +13,9 @@ const Footer = (props) => {
       </div>
       <div className='footerSection'>
         <img src={windIcon} alt='wind' className='footerIcon' />
-        <span>{wind} m/s</span>
+        <span>
+          {wind} {unit === 'metric' ? 'm/s' : 'mph'}
+        </span>
       </div>
       <div className='footerSection'>
         <img src={sunsetIcon} alt='daylight' className='footerIcon' />

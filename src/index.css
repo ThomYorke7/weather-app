@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina+2|Lato|Montserrat|Open+Sans&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -10,6 +12,15 @@ body {
 
 html {
   font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-image: url(./imgs/default.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: antiquewhite;
 }
 
 .searchbar {
@@ -18,37 +29,68 @@ html {
   align-items: baseline;
   width: 100%;
   padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .searchbar h1 {
   margin: 0;
 }
 
+.searchbar form {
+  display: flex;
+}
+
 .searchbar input {
-  margin-right: 0.3rem;
+  margin-right: 0.5rem;
   font-size: 1rem;
+  background-color: transparent;
+  color: antiquewhite;
+  border: none;
+  border-bottom: 1px solid antiquewhite;
+}
+
+.searchbar select {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  background-color: transparent;
+  color: antiquewhite;
+  border: none;
+  appearance: none;
+  cursor: pointer;
 }
 
 .searchbar button {
-  font-size: 1rem;
-}
-
-.header {
-  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(./icons/magnifier.png);
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .main {
   display: grid;
   width: 50%;
-  margin: auto;
+  margin: 1rem auto 0 auto;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr 0.5fr;
   grid-template-areas:
+    'header header header'
     'icon temp tempMax'
     'icon temp tempMin'
     'description description description'
     'feelsLike feelsLike feelsLike'
     'humidity wind sunset';
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#header {
+  grid-area: header;
+  justify-self: center;
+  align-self: center;
+  text-transform: uppercase;
 }
 
 #icon {
@@ -78,6 +120,8 @@ html {
   grid-area: description;
   justify-self: center;
   align-self: start;
+  text-transform: uppercase;
+  font-size: 1.3rem;
 }
 
 #feelsLike {
@@ -88,10 +132,12 @@ html {
 
 .footer {
   display: flex;
-  width: auto;
-  margin: 2rem auto;
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
   justify-content: center;
-  height: 2rem;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .footerIcon {

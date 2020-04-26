@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SearchBar = (props) => {
-  const { city, handleSubmit, handleChange } = props;
+  const { unit, handleSubmit, handleUnit } = props;
   return (
     <div className='searchbar'>
       <h1>The Weather App</h1>
@@ -10,12 +10,14 @@ const SearchBar = (props) => {
           type='text'
           name='city'
           id='city'
-          value={city}
-          onChange={(e) => handleChange(e)}
           placeholder='"London" or "London,uk"'
           required
         />
-        <button type='submit'>Search</button>
+        <button type='submit' />
+        <select name='unit' value={unit} onChange={(e) => handleUnit(e)}>
+          <option value='metric'>°C</option>
+          <option value='imperial'>°F</option>
+        </select>
       </form>
     </div>
   );
