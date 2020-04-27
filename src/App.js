@@ -27,7 +27,7 @@ class App extends React.Component {
 
   fetchData = (location, unit) => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=d63ce19c93477cd82ff15eed5d754f42&units=${unit}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=d63ce19c93477cd82ff15eed5d754f42&units=${unit}`
     )
       .then((response) => response.json())
       .then((data) => {
