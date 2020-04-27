@@ -11,7 +11,7 @@ const Main = (props) => {
     feelsLike,
     icon,
   } = props;
-  const iconURL = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  const iconURL = `https://openweathermap.org/img/wn/${icon}@2x.png`;
   return (
     <div className='main'>
       <h1 id='header'>{error !== '' ? 'Something went wrong...' : city}</h1>
