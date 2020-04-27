@@ -81,7 +81,7 @@ body {
   max-width: 60%;
   margin: 1.5rem auto 0 auto;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr;
+  grid-template-rows: repeat(5, auto);
   grid-template-areas:
     'header header header'
     'icon temp tempMax'
