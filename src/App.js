@@ -52,7 +52,6 @@ class App extends React.Component {
           error: '',
           type: data.weather[0].main,
         });
-        console.log(data);
       })
       .catch((error) => this.setState({ error: error.message }));
   };
@@ -76,7 +75,6 @@ class App extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevState.type !== this.state.type) {
       let backgroundImg = imgs.filter((img) => img.type === this.state.type);
-      console.log(backgroundImg[0]);
       document.body.style.backgroundImage = `url(${backgroundImg[0].src})`;
     }
   }
