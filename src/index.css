@@ -23,7 +23,6 @@ body {
   height: 100vh;
   color: antiquewhite;
   background-repeat: no-repeat;
-  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -79,7 +78,7 @@ body {
 .main {
   display: grid;
   max-width: 60%;
-  margin: 1rem auto 0 auto;
+  margin: 1.5rem auto 0 auto;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr;
   grid-template-areas:
@@ -169,7 +168,6 @@ body {
   body {
     min-height: 100vh;
     height: 100%;
-    overflow-y: hidden;
   }
 
   .searchbar {
@@ -213,7 +211,6 @@ body {
   body {
     min-height: 100vh;
     height: 100%;
-    overflow-y: hidden;
   }
 
   .main {
