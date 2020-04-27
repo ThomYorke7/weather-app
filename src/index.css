@@ -1,3 +1,4 @@
+/* Global Settings */
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina+2|Lato|Montserrat|Open+Sans&display=swap');
 
 * {
@@ -11,7 +12,7 @@ body {
 }
 
 html {
-  font-size: 22px;
+  font-size: 23px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -21,8 +22,12 @@ body {
   background-size: cover;
   height: 100vh;
   color: antiquewhite;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
+/*Searchbar Settings */
 .searchbar {
   display: flex;
   justify-content: space-between;
@@ -70,9 +75,10 @@ body {
   cursor: pointer;
 }
 
+/* Main Banner Settings*/
 .main {
   display: grid;
-  width: 50%;
+  max-width: 60%;
   margin: 1rem auto 0 auto;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr 0.5fr;
@@ -130,9 +136,10 @@ body {
   align-self: start;
 }
 
+/*Footer Settings */
 .footer {
   display: flex;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   padding-bottom: 1rem;
   justify-content: center;
@@ -146,6 +153,7 @@ body {
 }
 
 .footerSection {
+  min-width: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,4 +162,76 @@ body {
 #sunsetSpans {
   display: flex;
   flex-direction: column;
+}
+
+/*Media Queries */
+@media (max-width: 1025px) {
+  body {
+    min-height: 100vh;
+    height: 100%;
+    overflow-y: hidden;
+  }
+
+  .searchbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .searchbar > * {
+    padding: 0.5rem;
+  }
+
+  .main {
+    max-width: 90%;
+    grid-template-rows: 1fr 1fr 1fr 0.7fr 0.5fr;
+  }
+
+  .main p {
+    margin: 0;
+  }
+
+  .footer {
+    display: flex;
+    width: 90%;
+  }
+
+  .footerSection {
+    min-width: 6rem;
+  }
+}
+
+@media (max-width: 680px) {
+  html {
+    font-size: 18px;
+  }
+
+  body {
+    min-height: 100vh;
+    height: 100%;
+    overflow-y: hidden;
+  }
+
+  .main {
+    max-width: 90%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  #temp {
+    font-size: 2rem;
+  }
+
+  .footer {
+    display: flex;
+    max-width: 90%;
+  }
+
+  .footerSection {
+    min-width: 6rem;
+  }
 }
