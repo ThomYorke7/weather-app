@@ -87,8 +87,7 @@ body {
     'icon temp tempMax'
     'icon temp tempMin'
     'description description description'
-    'feelsLike feelsLike feelsLike'
-    'humidity wind sunset';
+    'feelsLike feelsLike feelsLike';
   background-color: rgba(0, 0, 0, 0.8);
 }
 
